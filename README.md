@@ -5,9 +5,9 @@ Easily create deployment artifacts with the minimum set of dependencies required
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/simple-artifact-builder.svg)](https://npmjs.org/package/simple-artifact-builder)
-[![Codecov](https://codecov.io/gh/uladkasach/simple-artifact-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/uladkasach/simple-artifact-builder)
+[![Codecov](https://codecov.io/gh/ehmpathy/simple-artifact-builder/branch/master/graph/badge.svg)](https://codecov.io/gh/ehmpathy/simple-artifact-builder)
 [![Downloads/week](https://img.shields.io/npm/dw/simple-artifact-builder.svg)](https://npmjs.org/package/simple-artifact-builder)
-[![License](https://img.shields.io/npm/l/simple-artifact-builder.svg)](https://github.com/uladkasach/simple-artifact-builder/blob/master/package.json)
+[![License](https://img.shields.io/npm/l/simple-artifact-builder.svg)](https://github.com/ehmpathy/simple-artifact-builder/blob/master/package.json)
 
 # Table of Contents
 <!-- toc -->
@@ -111,7 +111,7 @@ OPTIONS
   -h, --help           show CLI help
 ```
 
-_See code: [dist/contract/commands/zip.ts](https://github.com/uladkasach/simple-artifact-builder/blob/v0.0.1/dist/contract/commands/zip.ts)_
+_See code: [dist/contract/commands/zip.ts](https://github.com/ehmpathy/simple-artifact-builder/blob/v0.0.1/dist/contract/commands/zip.ts)_
 <!-- commandsstop -->
 
 # Contribution

@@ -4,8 +4,8 @@
   "description": "A tool to declaratively define best practices, maintainable evolve them, and scalably enforce them.",
   "author": "UladKasach @uladkasach",
   "license": "MIT",
-  "repository": "uladkasach/simple-artifact-builder",
-  "homepage": "https://github.com/uladkasach/simple-artifact-builder",
+  "repository": "ehmpathy/simple-artifact-builder",
+  "homepage": "https://github.com/ehmpathy/simple-artifact-builder",
   "keywords": [
     "declarative",
     "best",
@@ -18,7 +18,7 @@
     "linting",
     "fix"
   ],
-  "bugs": "https://github.com/uladkasach/simple-artifact-builder/issues",
+  "bugs": "https://github.com/ehmpathy/simple-artifact-builder/issues",
   "main": "dist/contract/index.js",
   "types": "dist/contract/index.d.ts",
   "bin": {
