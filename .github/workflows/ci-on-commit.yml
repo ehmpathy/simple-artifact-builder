@@ -9,7 +9,7 @@ on:
 
 jobs:
   install:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: checkout
         uses: actions/checkout@v1
@@ -25,7 +25,7 @@ jobs:
 
   # run tests in parallel
   test_types:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: [install]
     steps:
       - name: checkout
@@ -41,7 +41,7 @@ jobs:
         run: npm run test:types
 
   test_format:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: [install]
     steps:
       - name: checkout
@@ -53,11 +53,11 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ github.sha }}
 
-      - name: test:types
+      - name: test:format
         run: npm run test:format
 
   test_lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: [install]
     steps:
       - name: checkout
@@ -73,7 +73,7 @@ jobs:
         run: npm run test:lint
 
   test_unit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     needs: [install]
     steps:
       - name: checkout
@@ -87,19 +87,3 @@ jobs:
 
       - name: test:unit
         run: npm run test:unit
-
-  test_integration:
-    runs-on: ubuntu-latest
-    needs: [install]
-    steps:
-      - name: checkout
-        uses: actions/checkout@v1
-
-      - name: grab node_modules from cache
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ github.sha }}
-
-      - name: test:integration
-        run: npm run test:integration
