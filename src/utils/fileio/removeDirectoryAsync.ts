@@ -1,6 +1,4 @@
-import fs from 'fs';
-import util from 'util';
+import { promises as fs } from 'fs';
 
-const rmdir = util.promisify(fs.rmdir);
-
-export const removeDirectoryAsync = ({ directory }: { directory: string }) => rmdir(directory, { recursive: true });
+export const removeDirectoryAsync = ({ directory }: { directory: string }) =>
+  fs.rm(directory, { recursive: true, force: true });
