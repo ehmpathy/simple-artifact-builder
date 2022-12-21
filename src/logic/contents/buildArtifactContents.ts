@@ -29,7 +29,9 @@ export const buildArtifactContents = async ({
   });
 
   // merge all of the files specified
-  const relativeFilePaths = [...new Set([...pickedFilesSpecified, ...tracedFilesSpecified])].sort();
+  const relativeFilePaths = [
+    ...new Set([...pickedFilesSpecified, ...tracedFilesSpecified]),
+  ].sort();
 
   // add them all to artifact contents
   await addFilesToArtifactContents({

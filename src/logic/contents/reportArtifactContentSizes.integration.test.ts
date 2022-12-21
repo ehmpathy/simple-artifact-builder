@@ -1,4 +1,5 @@
 import fs from 'fs';
+
 import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
 import { reportArtifactContentSizes } from './reportArtifactContentSizes';
 
@@ -14,7 +15,11 @@ describe('reportArtifactContentsSize', () => {
     await reportArtifactContentSizes({ projectRootDirectory });
 
     // check its contents
-    const contents = JSON.parse((await fs.promises.readFile(targetOutputFilePath, { encoding: 'utf8' })) as string) as {
+    const contents = JSON.parse(
+      (await fs.promises.readFile(targetOutputFilePath, {
+        encoding: 'utf8',
+      })) as string,
+    ) as {
       sizes: any[];
     };
     expect(contents.sizes.length).toBeGreaterThan(1);

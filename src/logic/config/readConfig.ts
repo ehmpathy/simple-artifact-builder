@@ -1,7 +1,11 @@
 import { ArtifactConfig } from '../../domain';
 import { readYmlFile } from '../../utils/fileio/readYmlFile';
 
-export const readConfig = async ({ absoluteConfigPath }: { absoluteConfigPath: string }) => {
+export const readConfig = async ({
+  absoluteConfigPath,
+}: {
+  absoluteConfigPath: string;
+}) => {
   const projectRootDirectory = absoluteConfigPath
     .split('/')
     .slice(0, -1)

@@ -8,6 +8,8 @@ describe('defineAllPickedFilesSpecified', () => {
       pickFileGlobs: ['.next/**/*', '!.next/cache/**/*'],
     });
     expect(filePaths.length).toBeGreaterThan(1);
-    expect(filePaths.filter((path) => path.includes('cache/')).length).toEqual(0); // should not have included any of the cache files
+    expect(filePaths.filter((path) => path.includes('cache/')).length).toEqual(
+      0,
+    ); // should not have included any of the cache files
   });
 });

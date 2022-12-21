@@ -1,12 +1,19 @@
 import chalk from 'chalk';
+
 import { readConfig } from '../config/readConfig';
 import { zipArtifactContents } from '../containers/zipArtifactContents';
 import { buildArtifactContents } from '../contents/buildArtifactContents';
 
-export const zip = async ({ absoluteConfigPath }: { absoluteConfigPath: string }) => {
+export const zip = async ({
+  absoluteConfigPath,
+}: {
+  absoluteConfigPath: string;
+}) => {
   // read the config
   console.log('🔎 reading config...'); // tslint:disable-line: no-console
-  const { config, projectRootDirectory } = await readConfig({ absoluteConfigPath });
+  const { config, projectRootDirectory } = await readConfig({
+    absoluteConfigPath,
+  });
 
   // build the artifact
   console.log('🔨 building artifact...'); // tslint:disable-line: no-console

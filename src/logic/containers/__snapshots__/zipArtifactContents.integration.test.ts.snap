@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`zipArtifactContents should be able to zip artifact contents of built artifact 1`] = `
-Object {
-  ".next/": Object {
+{
+  ".next/": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -23,7 +23,7 @@ Object {
     "verMade": 813,
     "version": 10,
   },
-  ".next/BUILD_ID": Object {
+  ".next/BUILD_ID": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -44,7 +44,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/build-manifest.json": Object {
+  ".next/build-manifest.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -65,7 +65,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/export-marker.json": Object {
+  ".next/export-marker.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -86,7 +86,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/images-manifest.json": Object {
+  ".next/images-manifest.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -107,7 +107,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/next-server.js.nft.json": Object {
+  ".next/next-server.js.nft.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -128,7 +128,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/prerender-manifest.json": Object {
+  ".next/prerender-manifest.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -149,7 +149,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/react-loadable-manifest.json": Object {
+  ".next/react-loadable-manifest.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -170,7 +170,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/required-server-files.json": Object {
+  ".next/required-server-files.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -191,7 +191,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/routes-manifest.json": Object {
+  ".next/routes-manifest.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -212,7 +212,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/": Object {
+  ".next/server/": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -233,7 +233,7 @@ Object {
     "verMade": 813,
     "version": 10,
   },
-  ".next/server/chunks/": Object {
+  ".next/server/chunks/": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -254,7 +254,7 @@ Object {
     "verMade": 813,
     "version": 10,
   },
-  ".next/server/chunks/600.js": Object {
+  ".next/server/chunks/600.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -275,7 +275,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/chunks/664.js": Object {
+  ".next/server/chunks/664.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -296,7 +296,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/chunks/730.js": Object {
+  ".next/server/chunks/730.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -317,7 +317,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/chunks/859.js": Object {
+  ".next/server/chunks/859.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -338,7 +338,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/chunks/font-manifest.json": Object {
+  ".next/server/chunks/font-manifest.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -359,7 +359,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/font-manifest.json": Object {
+  ".next/server/font-manifest.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -380,7 +380,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/middleware-manifest.json": Object {
+  ".next/server/middleware-manifest.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -401,7 +401,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages-manifest.json": Object {
+  ".next/server/pages-manifest.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -422,7 +422,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/": Object {
+  ".next/server/pages/": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -443,7 +443,7 @@ Object {
     "verMade": 813,
     "version": 10,
   },
-  ".next/server/pages/404.html": Object {
+  ".next/server/pages/404.html": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -464,7 +464,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/500.html": Object {
+  ".next/server/pages/500.html": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -485,7 +485,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/_app.js": Object {
+  ".next/server/pages/_app.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -506,7 +506,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/_app.js.nft.json": Object {
+  ".next/server/pages/_app.js.nft.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -527,7 +527,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/_document.js": Object {
+  ".next/server/pages/_document.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -548,7 +548,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/_document.js.nft.json": Object {
+  ".next/server/pages/_document.js.nft.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -569,7 +569,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/_error.js": Object {
+  ".next/server/pages/_error.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -590,7 +590,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/_error.js.nft.json": Object {
+  ".next/server/pages/_error.js.nft.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -611,7 +611,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/about.html": Object {
+  ".next/server/pages/about.html": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -632,7 +632,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/about.js.nft.json": Object {
+  ".next/server/pages/about.js.nft.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -653,7 +653,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/index.html": Object {
+  ".next/server/pages/index.html": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -674,7 +674,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/pages/index.js.nft.json": Object {
+  ".next/server/pages/index.js.nft.json": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -695,7 +695,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/server/webpack-runtime.js": Object {
+  ".next/server/webpack-runtime.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -716,7 +716,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/": Object {
+  ".next/static/": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -737,7 +737,7 @@ Object {
     "verMade": 813,
     "version": 10,
   },
-  ".next/static/chunks/": Object {
+  ".next/static/chunks/": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -758,7 +758,7 @@ Object {
     "verMade": 813,
     "version": 10,
   },
-  ".next/static/chunks/31-ea2e06847afa5ee5.js": Object {
+  ".next/static/chunks/31-ea2e06847afa5ee5.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -779,7 +779,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/chunks/755-1f25bec492800030.js": Object {
+  ".next/static/chunks/755-1f25bec492800030.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -800,7 +800,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/chunks/framework-bbce3cdc1a611f18.js": Object {
+  ".next/static/chunks/framework-bbce3cdc1a611f18.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -821,7 +821,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/chunks/main-e7f9cd3517807e31.js": Object {
+  ".next/static/chunks/main-e7f9cd3517807e31.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -842,7 +842,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/chunks/pages/": Object {
+  ".next/static/chunks/pages/": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -863,7 +863,7 @@ Object {
     "verMade": 813,
     "version": 10,
   },
-  ".next/static/chunks/pages/_app-02318ea03113095b.js": Object {
+  ".next/static/chunks/pages/_app-02318ea03113095b.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -884,7 +884,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/chunks/pages/_error-2280fa386d040b66.js": Object {
+  ".next/static/chunks/pages/_error-2280fa386d040b66.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -905,7 +905,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/chunks/pages/about-a0e709c255002672.js": Object {
+  ".next/static/chunks/pages/about-a0e709c255002672.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -926,7 +926,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/chunks/pages/index-259f2ab4bd6663c8.js": Object {
+  ".next/static/chunks/pages/index-259f2ab4bd6663c8.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -947,7 +947,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/chunks/polyfills-a40ef1678bae11e696dba45124eadd70.js": Object {
+  ".next/static/chunks/polyfills-a40ef1678bae11e696dba45124eadd70.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -968,7 +968,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/chunks/webpack-514908bffb652963.js": Object {
+  ".next/static/chunks/webpack-514908bffb652963.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -989,7 +989,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/lwiVzzFlheitLtrmf0quQ/": Object {
+  ".next/static/lwiVzzFlheitLtrmf0quQ/": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -1010,7 +1010,7 @@ Object {
     "verMade": 813,
     "version": 10,
   },
-  ".next/static/lwiVzzFlheitLtrmf0quQ/_buildManifest.js": Object {
+  ".next/static/lwiVzzFlheitLtrmf0quQ/_buildManifest.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -1031,7 +1031,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/lwiVzzFlheitLtrmf0quQ/_middlewareManifest.js": Object {
+  ".next/static/lwiVzzFlheitLtrmf0quQ/_middlewareManifest.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -1052,7 +1052,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/static/lwiVzzFlheitLtrmf0quQ/_ssgManifest.js": Object {
+  ".next/static/lwiVzzFlheitLtrmf0quQ/_ssgManifest.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -1073,7 +1073,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  ".next/trace": Object {
+  ".next/trace": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -1094,7 +1094,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  "dist/": Object {
+  "dist/": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -1115,7 +1115,7 @@ Object {
     "verMade": 813,
     "version": 10,
   },
-  "dist/handler.js": Object {
+  "dist/handler.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,
@@ -1136,7 +1136,7 @@ Object {
     "verMade": 813,
     "version": 20,
   },
-  "dist/server.js": Object {
+  "dist/server.js": {
     "attr": "__REDACTED__",
     "comLen": 0,
     "comment": null,

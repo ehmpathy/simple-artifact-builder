@@ -8,6 +8,8 @@ export const defineAllPickedFilesSpecified = async ({
   pickFileGlobs: string[];
 }) => {
   // run glob against each glob given and pull back the files specified
-  const filePaths = await fastGlob(pickFileGlobs, { cwd: projectRootDirectory });
+  const filePaths = await fastGlob(pickFileGlobs, {
+    cwd: projectRootDirectory,
+  });
   return filePaths.sort();
 };

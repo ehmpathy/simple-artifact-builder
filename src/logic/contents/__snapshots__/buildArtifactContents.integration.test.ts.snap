@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`buildArtifactContents should be able to build artifact contents for a next.js project using nexts outputted trace files + user server files 1`] = `
-Array [
+[
   ".next/BUILD_ID",
   ".next/build-manifest.json",
   ".next/export-marker.json",

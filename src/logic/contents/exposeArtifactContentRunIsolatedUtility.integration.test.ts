@@ -1,4 +1,5 @@
 import fs from 'fs';
+
 import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
 import { exposeArtifactContentRunIsolatedUtility } from './exposeArtifactContentRunIsolatedUtility';
 
@@ -14,7 +15,11 @@ describe('exposeARtifactContentRunIsolatedUtility', () => {
     await exposeArtifactContentRunIsolatedUtility({ projectRootDirectory });
 
     // check it is correct
-    const contents = await fs.promises.readFile(targetOutputFilePath, { encoding: 'utf8' });
-    expect(contents).toContain('🚧 this is a utility to aid in testing your artifacts 🚧');
+    const contents = await fs.promises.readFile(targetOutputFilePath, {
+      encoding: 'utf8',
+    });
+    expect(contents).toContain(
+      '🚧 this is a utility to aid in testing your artifacts 🚧',
+    );
   });
 });

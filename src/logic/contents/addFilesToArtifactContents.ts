@@ -1,4 +1,5 @@
 import fs from 'fs';
+
 import { UserInputError } from '../UserInputError';
 
 const checkFileExists = (file: string) => {
@@ -20,7 +21,8 @@ export const addFilesToArtifactContents = async ({
   projectRootDirectory: string;
   relativeFilePaths: string[];
 }) => {
-  const toAbsolutePath = (relativePath: string) => `${projectRootDirectory}/${relativePath}`;
+  const toAbsolutePath = (relativePath: string) =>
+    `${projectRootDirectory}/${relativePath}`;
 
   // target directory
   const targetDirectory = '.artifact/contents';
@@ -39,7 +41,9 @@ export const addFilesToArtifactContents = async ({
       const destinationRelativeFilePath = `${targetDirectory}/${sourceRelativeFilePath}`;
 
       // check that the file exists
-      const existsSourceFile = await checkFileExists(toAbsolutePath(sourceRelativeFilePath));
+      const existsSourceFile = await checkFileExists(
+        toAbsolutePath(sourceRelativeFilePath),
+      );
       if (!existsSourceFile) {
         nonExistentSourceFilePaths.push(sourceRelativeFilePath);
         return; // stop here if it doesn't exist
@@ -57,17 +61,23 @@ export const addFilesToArtifactContents = async ({
       );
 
       // move the file into it
-      await fs.promises.copyFile(toAbsolutePath(sourceRelativeFilePath), toAbsolutePath(destinationRelativeFilePath));
+      await fs.promises.copyFile(
+        toAbsolutePath(sourceRelativeFilePath),
+        toAbsolutePath(destinationRelativeFilePath),
+      );
     }),
   );
 
   // if any of the files did not exist, throw an error now
   if (nonExistentSourceFilePaths.length)
-    throw new UserInputError('not all of the dependencies identified as required were found when building artifact', {
-      potentialSolution: `please track down the following missing files: ${[
-        '',
-        ...nonExistentSourceFilePaths.slice(0, 21),
-        ...(nonExistentSourceFilePaths.length > 21 ? ['...'] : []), // add `...` as last row if more than 21 imports missing
-      ].join('\n - ')}`,
-    });
+    throw new UserInputError(
+      'not all of the dependencies identified as required were found when building artifact',
+      {
+        potentialSolution: `please track down the following missing files: ${[
+          '',
+          ...nonExistentSourceFilePaths.slice(0, 21),
+          ...(nonExistentSourceFilePaths.length > 21 ? ['...'] : []), // add `...` as last row if more than 21 imports missing
+        ].join('\n - ')}`,
+      },
+    );
 };

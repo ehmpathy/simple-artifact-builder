@@ -1,4 +1,5 @@
 import fs from 'fs';
+
 import { UserInputError } from '../UserInputError';
 
 export const assertThatArtifactContentsWereBuilt = async ({
@@ -6,7 +7,8 @@ export const assertThatArtifactContentsWereBuilt = async ({
 }: {
   projectRootDirectory: string;
 }) => {
-  const toAbsolutePath = (relativePath: string) => `${projectRootDirectory}/${relativePath}`;
+  const toAbsolutePath = (relativePath: string) =>
+    `${projectRootDirectory}/${relativePath}`;
 
   // check that artifact contents exist
   const artifactContentsExist = await fs.promises

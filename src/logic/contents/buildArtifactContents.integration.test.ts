@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { UserInputError } from '../UserInputError';
 
+import { UserInputError } from '../UserInputError';
 import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
 import { buildArtifactContents } from './buildArtifactContents';
 
@@ -38,12 +38,18 @@ describe('buildArtifactContents', () => {
       `${projectRootDirectory}/.artifact/contents.manifest.json`,
       { encoding: 'utf8' },
     );
-    const artifactContentsFiles: string[] = JSON.parse(artifactContentsManifest).files;
+    const artifactContentsFiles: string[] = JSON.parse(
+      artifactContentsManifest,
+    ).files;
     expect(artifactContentsFiles).toContain('dist/handler.js'); // the traced file
     expect(artifactContentsFiles).toContain('dist/server.js'); // atleast one dependency of the traced file
     expect(artifactContentsFiles).toContain('.next/BUILD_ID'); // atleast one of the picked files
-    expect(artifactContentsFiles).toContain('node_modules/@emotion/cache/package.json'); // atleast one of the existing trace output files dependencies
-    expect(artifactContentsFiles).not.toContain('.next/node_modules/chalk/index.js'); // the .next/node_modules is the bug that we've seen, should just be node_modules; (note, we saw this when we included the .next/cache/... .nft.json files, so solution is just to exclude that)
+    expect(artifactContentsFiles).toContain(
+      'node_modules/@emotion/cache/package.json',
+    ); // atleast one of the existing trace output files dependencies
+    expect(artifactContentsFiles).not.toContain(
+      '.next/node_modules/chalk/index.js',
+    ); // the .next/node_modules is the bug that we've seen, should just be node_modules; (note, we saw this when we included the .next/cache/... .nft.json files, so solution is just to exclude that)
     expect(artifactContentsFiles).toMatchSnapshot();
   });
 });

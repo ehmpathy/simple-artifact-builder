@@ -1,8 +1,8 @@
 import fs from 'fs';
 import StreamZip from 'node-stream-zip';
 
-import { zipArtifactContents } from './zipArtifactContents';
 import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
+import { zipArtifactContents } from './zipArtifactContents';
 
 describe('zipArtifactContents', () => {
   it('should be able to zip artifact contents of built artifact', async () => {

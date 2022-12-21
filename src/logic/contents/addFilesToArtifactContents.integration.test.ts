@@ -1,4 +1,5 @@
 import fastGlob from 'fast-glob';
+
 import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
 import { addFilesToArtifactContents } from './addFilesToArtifactContents';
 import { clearArtifactDirectory } from './clearArtifactDirectory';
@@ -13,7 +14,10 @@ describe('addFilesToArtifactContents', () => {
     // add files to the artifact directory
     await addFilesToArtifactContents({
       projectRootDirectory,
-      relativeFilePaths: ['src/thingA.ts', 'mode_nodules/simple-thing-doer/src/index.js'],
+      relativeFilePaths: [
+        'src/thingA.ts',
+        'mode_nodules/simple-thing-doer/src/index.js',
+      ],
     });
 
     // now check that we moved them successfully, and only them
@@ -21,7 +25,9 @@ describe('addFilesToArtifactContents', () => {
       cwd: projectRootDirectory,
     });
     expect(movedFiles).toContain('.artifact/contents/src/thingA.ts');
-    expect(movedFiles).toContain('.artifact/contents/mode_nodules/simple-thing-doer/src/index.js');
+    expect(movedFiles).toContain(
+      '.artifact/contents/mode_nodules/simple-thing-doer/src/index.js',
+    );
     expect(movedFiles).not.toContain('.artifact/contents/dist/logic/thingB.js');
   });
 });

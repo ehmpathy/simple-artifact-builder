@@ -1,4 +1,5 @@
 import { Command, flags } from '@oclif/command';
+
 import { zip } from '../../logic/commands/zip';
 
 export default class Apply extends Command {
@@ -19,7 +20,8 @@ export default class Apply extends Command {
     const config = flags.config!;
 
     // define config path
-    const absoluteConfigPath = config.slice(0, 1) === '/' ? config : `${process.cwd()}/${config}`; // if starts with /, consider it as an absolute path
+    const absoluteConfigPath =
+      config.slice(0, 1) === '/' ? config : `${process.cwd()}/${config}`; // if starts with /, consider it as an absolute path
     await zip({ absoluteConfigPath });
   }
 }

@@ -5,7 +5,8 @@ export const exposeArtifactContentRunIsolatedUtility = async ({
 }: {
   projectRootDirectory: string;
 }) => {
-  const toAbsolutePath = (relativePath: string) => `${projectRootDirectory}/${relativePath}`;
+  const toAbsolutePath = (relativePath: string) =>
+    `${projectRootDirectory}/${relativePath}`;
 
   // grab the contents of the utility we want to provision
   const utilityFileContents = await fs.promises.readFile(
@@ -13,5 +14,8 @@ export const exposeArtifactContentRunIsolatedUtility = async ({
   );
 
   // write those contents into the artifact output dir
-  await fs.promises.writeFile(toAbsolutePath('.artifact/contents.run.isolated.js'), utilityFileContents);
+  await fs.promises.writeFile(
+    toAbsolutePath('.artifact/contents.run.isolated.js'),
+    utilityFileContents,
+  );
 };

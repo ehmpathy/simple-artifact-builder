@@ -1,5 +1,6 @@
 import archiver from 'archiver';
 import fs from 'fs';
+
 import { assertThatArtifactContentsWereBuilt } from '../contents/assertThatArtifactContentsWereBuilt';
 
 /**
@@ -7,7 +8,13 @@ import { assertThatArtifactContentsWereBuilt } from '../contents/assertThatArtif
  *
  * ref: https://stackoverflow.com/a/51518100/3068233
  */
-const zipDirectory = ({ source, destination }: { source: string; destination: string }) => {
+const zipDirectory = ({
+  source,
+  destination,
+}: {
+  source: string;
+  destination: string;
+}) => {
   const archive = archiver('zip', { zlib: { level: 9 } });
   const stream = fs.createWriteStream(destination);
   return new Promise((resolve, reject) => {
@@ -20,8 +27,13 @@ const zipDirectory = ({ source, destination }: { source: string; destination: st
   });
 };
 
-export const zipArtifactContents = async ({ projectRootDirectory }: { projectRootDirectory: string }) => {
-  const toAbsolutePath = (relativePath: string) => `${projectRootDirectory}/${relativePath}`;
+export const zipArtifactContents = async ({
+  projectRootDirectory,
+}: {
+  projectRootDirectory: string;
+}) => {
+  const toAbsolutePath = (relativePath: string) =>
+    `${projectRootDirectory}/${relativePath}`;
 
   // check that artifact contents exist
   await assertThatArtifactContentsWereBuilt({ projectRootDirectory });
