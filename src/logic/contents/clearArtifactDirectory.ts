@@ -9,7 +9,8 @@ export const clearArtifactDirectory = async ({
   projectRootDirectory: string;
 }) => {
   // make sure the artifact directory doesn't exist yet to run from a clean slate
-  await fs.promises.rmdir(`${projectRootDirectory}/.artifact`, {
+  await fs.promises.rm(`${projectRootDirectory}/.artifact`, {
     recursive: true,
+    force: true,
   });
 };
