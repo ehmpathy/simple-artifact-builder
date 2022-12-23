@@ -6,7 +6,7 @@ const config: Config = {
   testEnvironment: 'node',
   moduleFileExtensions: ['js', 'ts'],
   transform: {
-    '^.+\\.[tj]sx?$': 'ts-jest', // https://kulshekhar.github.io/ts-jest/docs/getting-started/presets
+    '^.+\\.[tj]sx?$': ['ts-jest', { useESM: true }], // https://kulshekhar.github.io/ts-jest/docs/getting-started/presets
   },
   testMatch: [
     // note: order matters
