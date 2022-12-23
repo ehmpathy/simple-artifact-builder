@@ -3,7 +3,7 @@
   "author": "ehmpathy",
   "description": "A tool to declaratively define best practices, maintainable evolve them, and scalably enforce them.",
   "private": true,
-  "version": "1.1.4",
+  "version": "1.1.5",
   "repository": "ehmpathy/simple-artifact-builder",
   "homepage": "https://github.com/ehmpathy/simple-artifact-builder",
   "keywords": [
