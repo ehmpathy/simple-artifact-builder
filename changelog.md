@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.4...v1.1.5) (2022-12-23)
+
+
+### Bug Fixes
+
+* **cicd:** specify the node registry to unblock publishing ([5153d15](https://github.com/ehmpathy/simple-artifact-builder/commit/5153d15bc1ca2ca9fffabe6d56ebc274190a05f0))
+
 ## [1.1.4](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.3...v1.1.4) (2022-12-23)
 
 
