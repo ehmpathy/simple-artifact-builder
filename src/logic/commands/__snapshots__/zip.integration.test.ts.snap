@@ -12,7 +12,7 @@ exports[`apply should be able to apply for an example project 1`] = `
     "🗜️  zipping artifact...",
   ],
   [
-    "🎉 done! [90m(.artifact/contents.zip)[39m",
+    "🎉 done! (.artifact/contents.zip)",
   ],
 ]
 `;
