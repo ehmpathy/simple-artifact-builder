@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.6](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.5...v1.1.6) (2022-12-23)
+
+
+### Bug Fixes
+
+* **pkg:** remove private flag from package description ([a77fef4](https://github.com/ehmpathy/simple-artifact-builder/commit/a77fef4e2a2b4bf97029d59f64acb0c95f883c11))
+
 ## [1.1.5](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.4...v1.1.5) (2022-12-23)
 
 
