@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.3](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.2...v1.1.3) (2022-12-23)
+
+
+### Bug Fixes
+
+* **cicd:** update the please-release action version ([9000f84](https://github.com/ehmpathy/simple-artifact-builder/commit/9000f84eccf6a097c7a80b64647abf02b0cd6fed))
+* **cicd:** upgrade github actions config ([dcb71b4](https://github.com/ehmpathy/simple-artifact-builder/commit/dcb71b420b583090ad1f114df6b52834f8ca146d))
+* **deps:** upgrade chalk version to resolve coloring snapshot failure in test ([127aa8d](https://github.com/ehmpathy/simple-artifact-builder/commit/127aa8ddbed9b0b7c3f53a8cf62222fee8327f11))
+* **deps:** use fs.rm instead of fs.rmdir per deprecation warning ([0fc2505](https://github.com/ehmpathy/simple-artifact-builder/commit/0fc250527ebb4e404fb823986b56af7dc783d684))
+* **pkg:** ensure that the distributed simple-artifact-builder package does not include __test_assets__ ([4b6a21f](https://github.com/ehmpathy/simple-artifact-builder/commit/4b6a21f036b50ab7f5009e4d177fa50dcf962c04))
+* **pract:** upgrade to use latest declared best practices ([fb2d5ee](https://github.com/ehmpathy/simple-artifact-builder/commit/fb2d5eef668c4a34b953aa07aa85fea47962ef88))
+* **refs:** replace uladkasach repo refs to ehmpathy repo refs ([9d3dabe](https://github.com/ehmpathy/simple-artifact-builder/commit/9d3dabe14537afe1753ca016ed7cdfc27f98c859))
+* **snapshot:** ensure that ci=true when running jest test so ci snapshot test passes ([82e2642](https://github.com/ehmpathy/simple-artifact-builder/commit/82e2642d845c4ad9c73e9038e61d46fc27643553))
+* **test:** drop fs.rmdir in favor of fs.rm per node18 deprecation ([24bac2c](https://github.com/ehmpathy/simple-artifact-builder/commit/24bac2cc911fb817e1ff95a33755ac106e8151bc))
+
 ### [1.1.2](https://www.github.com/uladkasach/simple-artifact-builder/compare/v1.1.1...v1.1.2) (2021-11-09)
 
 
