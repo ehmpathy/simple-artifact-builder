@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.7](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.6...v1.1.7) (2023-02-05)
+
+
+### Bug Fixes
+
+* **deps:** bump from uuid@8.3 to unblock npm installs ([de44909](https://github.com/ehmpathy/simple-artifact-builder/commit/de449091d37df21638e5fb8c88b601976d6c896d))
+
 ## [1.1.6](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.5...v1.1.6) (2022-12-23)
 
 
