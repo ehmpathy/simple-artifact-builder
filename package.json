@@ -39,7 +39,6 @@
   },
   "scripts": {
     "generate:cli-readme": "npm run build && oclif-dev readme",
-    "build:ts": "tsc -p ./tsconfig.build.json",
     "build:static-assets": "copyfiles -u 1 src/logic/contents/*.js dist/",
     "commit:with-cli": "npx cz",
     "fix:format:prettier": "prettier --write '**/*.ts' --config ./prettier.config.js",
@@ -47,7 +46,7 @@
     "fix:lint": "eslint -c ./.eslintrc.js src/**/*.ts --fix",
     "build:clean": "rm dist/ -rf",
     "build:compile": "tsc -p ./tsconfig.build.json",
-    "build": "npm run build:clean && npm run build:compile",
+    "build": "npm run build:clean && npm run build:compile && npm run build:static-assets",
     "test:commits": "LAST_TAG=$(git describe --tags --abbrev=0 @^ 2> /dev/null || git rev-list --max-parents=0 HEAD) && npx commitlint --from $LAST_TAG --to HEAD --verbose",
     "test:types": "tsc -p ./tsconfig.build.json --noEmit",
     "test:format:prettier": "prettier --parser typescript --check 'src/**/*.ts' --config ./prettier.config.js",
