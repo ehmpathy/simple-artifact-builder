@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.8](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.7...v1.1.8) (2023-02-05)
+
+
+### Bug Fixes
+
+* **deps:** ensure to bundle the static js executable with dist ([8c5ad03](https://github.com/ehmpathy/simple-artifact-builder/commit/8c5ad03698df08146b82f8938859b490a2d7836b))
+
 ## [1.1.7](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.6...v1.1.7) (2023-02-05)
 
 
