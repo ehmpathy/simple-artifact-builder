@@ -1,0 +1,20 @@
+# packages to ignore if found unused
+ignores:
+  - depcheck
+  - declapract
+  - declapract-typescript-ehmpathy
+  - '@commitlint/config-conventional'
+  - '@trivago/prettier-plugin-sort-imports'
+  - '@tsconfig/node-lts-strictest'
+  - core-js
+  - ts-jest
+  - ts-node
+  - type-fns
+  - date-fns
+  - husky
+  - '@oclif/plugin-help'
+  - oclif
+
+# directories to not check for dependencies in
+ignorePatterns:
+  - src/logic/__test_assets__/** # these test assets contain imports we ignore
