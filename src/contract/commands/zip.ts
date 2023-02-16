@@ -1,13 +1,14 @@
-import { Command, flags } from '@oclif/command';
+import { Command, Flags } from '@oclif/core';
 
 import { zip } from '../../logic/commands/zip';
 
-export default class Apply extends Command {
+// eslint-disable-next-line import/no-default-export
+export default class Zip extends Command {
   public static description = 'builds and zips the artifact';
 
   public static flags = {
-    help: flags.help({ char: 'h' }),
-    config: flags.string({
+    help: Flags.help({ char: 'h' }),
+    config: Flags.string({
       char: 'c',
       description: 'path to the artifact config yml',
       required: true,
@@ -16,7 +17,7 @@ export default class Apply extends Command {
   };
 
   public async run() {
-    const { flags } = this.parse(Apply);
+    const { flags } = await this.parse(Zip);
     const config = flags.config!;
 
     // define config path
