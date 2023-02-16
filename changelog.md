@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.9](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.8...v1.1.9) (2023-02-16)
+
+
+### Bug Fixes
+
+* **audit:** resolve security vulnerabilities with audit fix ([6922142](https://github.com/ehmpathy/simple-artifact-builder/commit/69221424fa586fc9cf93793a0293e96a332ad173))
+* **practs:** upgrade to latest declapract-typescript-ehmpathy best practices ([3c3c15e](https://github.com/ehmpathy/simple-artifact-builder/commit/3c3c15e6917c364d8de91c4678bbe2ebf8898d5b))
+
 ## [1.1.8](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.7...v1.1.8) (2023-02-05)
 
 
