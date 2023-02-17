@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.10](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.9...v1.1.10) (2023-02-17)
+
+
+### Bug Fixes
+
+* **dist:** ensure to bundle the static assets with pkg ([27c0a15](https://github.com/ehmpathy/simple-artifact-builder/commit/27c0a153cb6591103a2322e2815213897de38283))
+
 ## [1.1.9](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.8...v1.1.9) (2023-02-16)
 
 
