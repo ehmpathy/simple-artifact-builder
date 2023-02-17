@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.11](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.10...v1.1.11) (2023-02-17)
+
+
+### Bug Fixes
+
+* **deps:** bump min simple-artifact-builder version to avoid bug ([3fdc9b9](https://github.com/ehmpathy/simple-artifact-builder/commit/3fdc9b97d1d5c6b837be2937da7956f4dcc67e0d))
+
 ## [1.1.10](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.9...v1.1.10) (2023-02-17)
 
 
