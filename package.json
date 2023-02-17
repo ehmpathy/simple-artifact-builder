@@ -48,7 +48,7 @@
     "build:artifact": "echo 'no artifact'",
     "build:clean": "rm dist/ -rf",
     "build:compile": "tsc -p ./tsconfig.build.json",
-    "build": "npm run build:clean && npm run build:compile && build:static-assets && npm run build:artifact",
+    "build": "npm run build:clean && npm run build:compile && npm run build:static-assets && npm run build:artifact",
     "test:commits": "LAST_TAG=$(git describe --tags --abbrev=0 @^ 2> /dev/null || git rev-list --max-parents=0 HEAD) && npx commitlint --from $LAST_TAG --to HEAD --verbose",
     "test:types": "tsc -p ./tsconfig.build.json --noEmit",
     "test:format:prettier": "prettier --parser typescript --check 'src/**/*.ts' --config ./prettier.config.js",
