@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.13](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.12...v1.1.13) (2024-07-27)
+
+
+### Bug Fixes
+
+* **build:** recover static-assets in build artifact ([a2351d2](https://github.com/ehmpathy/simple-artifact-builder/commit/a2351d21d0ba7a55cb88d091c2b12c94455d742e))
+* **practs:** bump practs to latest best ([fc73bcc](https://github.com/ehmpathy/simple-artifact-builder/commit/fc73bccdf956123ac5d3ee5820bf760f286470b7))
+
 ## [1.1.12](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.11...v1.1.12) (2024-07-27)
 
 
