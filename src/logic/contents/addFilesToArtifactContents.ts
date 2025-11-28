@@ -60,10 +60,11 @@ export const addFilesToArtifactContents = async ({
         },
       );
 
-      // move the file into it
-      await fs.promises.copyFile(
+      // copy the file into it (with dereference to support pnpm symlinks)
+      await fs.promises.cp(
         toAbsolutePath(sourceRelativeFilePath),
         toAbsolutePath(destinationRelativeFilePath),
+        { recursive: true, dereference: true },
       );
     }),
   );
