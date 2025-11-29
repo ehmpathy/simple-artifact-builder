@@ -1,6 +1,6 @@
 import { register } from 'ts-node';
 
-import { UnexpectedCodePathError } from '../../logic/UnexpectedCodePathError';
+import { UnexpectedCodePathError } from 'helpful-errors';
 
 const nodeModulesToTSNodeTranspileOnImport: string[] = [];
 const isExplicitImportToNodeModule = (filePath: string) =>

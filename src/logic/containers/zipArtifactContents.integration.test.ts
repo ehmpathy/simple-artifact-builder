@@ -1,7 +1,7 @@
 import fs from 'fs';
 import StreamZip from 'node-stream-zip';
 
-import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
+import { TEST_ASSETS_DIRECTORY } from '../.test/assets/testAssetsDirectory';
 import { zipArtifactContents } from './zipArtifactContents';
 
 describe('zipArtifactContents', () => {
