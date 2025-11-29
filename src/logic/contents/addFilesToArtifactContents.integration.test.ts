@@ -32,7 +32,7 @@ describe('addFilesToArtifactContents', () => {
     expect(movedFiles).not.toContain('.artifact/contents/dist/logic/thingB.js');
   });
 
-  it('should dereference symlinks when copying (pnpm compatibility)', async () => {
+  it('should preserve symlinks when copying (pnpm compatibility)', async () => {
     const projectRootDirectory = `${TEST_ASSETS_DIRECTORY}/project-with-symlinks`;
 
     // make sure the artifact directory doesn't exist yet to run from a clean slate
@@ -44,35 +44,43 @@ describe('addFilesToArtifactContents', () => {
     );
     expect(sourceStats.isSymbolicLink()).toBe(true);
 
-    // add the symlinked directory to the artifact
+    // add both the symlink AND its target to the artifact (as pnpm tracing would)
     await addFilesToArtifactContents({
       projectRootDirectory,
       relativeFilePaths: [
         'src/app.ts',
-        'node_modules/example-package', // this is a symlink
+        'node_modules/example-package', // symlink
+        '.pnpm/example-package/package.json', // real file (symlink target)
+        '.pnpm/example-package/src/index.js', // real file (symlink target)
       ],
     });
 
-    // verify the files were copied successfully
-    const movedFiles = await fastGlob('.artifact/contents/**/*', {
-      cwd: projectRootDirectory,
-    });
-    expect(movedFiles).toContain('.artifact/contents/src/app.ts');
-    expect(movedFiles).toContain(
-      '.artifact/contents/node_modules/example-package/package.json',
-    );
-    expect(movedFiles).toContain(
-      '.artifact/contents/node_modules/example-package/src/index.js',
-    );
-
-    // verify the copied result is a real directory, not a symlink
+    // verify the symlink was preserved (not dereferenced)
     const destStats = await fs.promises.lstat(
       `${projectRootDirectory}/.artifact/contents/node_modules/example-package`,
     );
-    expect(destStats.isSymbolicLink()).toBe(false);
-    expect(destStats.isDirectory()).toBe(true);
+    expect(destStats.isSymbolicLink()).toBe(true);
 
-    // verify the file contents were copied correctly
+    // verify the symlink target is correct
+    const linkTarget = await fs.promises.readlink(
+      `${projectRootDirectory}/.artifact/contents/node_modules/example-package`,
+    );
+    expect(linkTarget).toBe('../.pnpm/example-package');
+
+    // verify the real files were copied (use dot: true to match .pnpm directory)
+    const movedFiles = await fastGlob('.artifact/contents/**/*', {
+      cwd: projectRootDirectory,
+      dot: true,
+    });
+    expect(movedFiles).toContain('.artifact/contents/src/app.ts');
+    expect(movedFiles).toContain(
+      '.artifact/contents/.pnpm/example-package/package.json',
+    );
+    expect(movedFiles).toContain(
+      '.artifact/contents/.pnpm/example-package/src/index.js',
+    );
+
+    // verify the symlink resolves correctly and we can read the file through it
     const copiedContent = await fs.promises.readFile(
       `${projectRootDirectory}/.artifact/contents/node_modules/example-package/src/index.js`,
       'utf-8',

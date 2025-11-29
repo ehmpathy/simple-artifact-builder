@@ -44,4 +44,44 @@ describe('defineALlTracedFilesSpecified', () => {
     expect(filePaths).toContain('.next/server/webpack-runtime.js'); // to show it did grab the .next directory things
     expect(filePaths).toMatchSnapshot(); // save an example
   });
+  it('should trace pnpm dependencies including symlinks and their targets', async () => {
+    // This test verifies that when tracing a project with pnpm-style symlinks,
+    // both the symlinks and their real targets are included.
+    //
+    // pnpm creates symlinks like:
+    //   node_modules/main-package -> .pnpm/main-package@1.0.0/node_modules/main-package
+    //   node_modules/.pnpm/main-package@1.0.0/node_modules/@scope/nested-dep -> symlink to actual package
+    //
+    // The tracer returns both:
+    //   - The symlink paths (node_modules/main-package)
+    //   - The real file paths (.pnpm/.../index.js)
+    //
+    // When we preserve symlinks during copy (instead of dereferencing), the
+    // artifact maintains the same structure and Node.js resolution works naturally.
+    const filePaths = await defineAllTracedFilesSpecified({
+      projectRootDirectory: `${TEST_ASSETS_DIRECTORY}/lambda-project-pnpm-deps`,
+      traceFileGlobs: ['dist/handler.js'],
+    });
+
+    // Should include the handler itself
+    expect(filePaths).toContain('dist/handler.js');
+
+    // Should include the root-level symlink to main-package
+    expect(filePaths).toContain('node_modules/main-package');
+
+    // Should include the real main-package files in .pnpm
+    expect(filePaths).toContain(
+      'node_modules/.pnpm/main-package@1.0.0/node_modules/main-package/index.js',
+    );
+
+    // Should include the nested symlink within .pnpm structure
+    expect(filePaths).toContain(
+      'node_modules/.pnpm/main-package@1.0.0/node_modules/@scope/nested-dep',
+    );
+
+    // Should include the real nested-dep files in .pnpm
+    expect(filePaths).toContain(
+      'node_modules/.pnpm/@scope+nested-dep@1.0.0/node_modules/@scope/nested-dep/index.js',
+    );
+  });
 });

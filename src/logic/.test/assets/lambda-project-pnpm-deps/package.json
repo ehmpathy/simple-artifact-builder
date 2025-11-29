@@ -1,0 +1,9 @@
+{
+  "name": "lambda-project-pnpm-deps",
+  "version": "1.0.0",
+  "description": "Test project with pnpm-style nested symlinks",
+  "dependencies": {
+    "main-package": "1.0.0",
+    "@scope/nested-dep": "1.0.0"
+  }
+}
