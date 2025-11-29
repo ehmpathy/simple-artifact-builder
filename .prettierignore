@@ -1,2 +1,2 @@
 *.md
-**/__test_assets__/**/*
+**/.test/assets/**/*

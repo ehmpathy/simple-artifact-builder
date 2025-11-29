@@ -1982,5 +1982,5 @@ exports[`defineALlTracedFilesSpecified should throw a helpful error message if i
 "User input error. Files specified for tracing on which tracing can not be run. Please correct this and try again.
 
 only '.js' files and '.nft.json' files are usable for tracing. please review: 
- - dist/__test_assets__/hold.sh"
+ - dist/.test/assets/hold.sh"
 `;

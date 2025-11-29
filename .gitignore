@@ -5,6 +5,7 @@
 .artifact
 .env
 .serverless
+.temp
 .terraform
 .terraform.lock
 .yalc
@@ -15,4 +16,5 @@
 /yarn.lock
 coverage
 dist
+!**/.test/**/dist
 node_modules
