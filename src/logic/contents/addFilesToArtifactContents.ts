@@ -60,12 +60,18 @@ export const addFilesToArtifactContents = async ({
         },
       );
 
-      // copy the file into it (with dereference to support pnpm symlinks)
-      await fs.promises.cp(
-        toAbsolutePath(sourceRelativeFilePath),
-        toAbsolutePath(destinationRelativeFilePath),
-        { recursive: true, dereference: true },
-      );
+      // check if it's a symlink
+      const srcPath = toAbsolutePath(sourceRelativeFilePath);
+      const destPath = toAbsolutePath(destinationRelativeFilePath);
+      const stat = await fs.promises.lstat(srcPath);
+      if (stat.isSymbolicLink()) {
+        // preserve symlink as-is (pnpm uses relative symlinks that remain valid in artifact)
+        const linkTarget = await fs.promises.readlink(srcPath);
+        await fs.promises.symlink(linkTarget, destPath);
+      } else {
+        // copy real file/directory
+        await fs.promises.cp(srcPath, destPath, { recursive: true });
+      }
     }),
   );
 
