@@ -1,7 +1,7 @@
 import fastGlob from 'fast-glob';
 import fs from 'fs';
 
-import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
+import { TEST_ASSETS_DIRECTORY } from '../.test/assets/testAssetsDirectory';
 import { addFilesToArtifactContents } from './addFilesToArtifactContents';
 import { clearArtifactDirectory } from './clearArtifactDirectory';
 

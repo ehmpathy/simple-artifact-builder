@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
+import { TEST_ASSETS_DIRECTORY } from '../.test/assets/testAssetsDirectory';
 import { reportArtifactContentSizes } from './reportArtifactContentSizes';
 
 describe('reportArtifactContentsSize', () => {
@@ -8,7 +8,7 @@ describe('reportArtifactContentsSize', () => {
     const projectRootDirectory = `${TEST_ASSETS_DIRECTORY}/nextjs-mui-project-next-dir-for-sizing`;
     const targetOutputFilePath = `${projectRootDirectory}/.artifact/contents.sizes.json`;
 
-    // remove the previous file if it exists
+    // remove the previous sizes file if it exists
     await fs.promises.unlink(targetOutputFilePath).catch(() => {}); // do nothing on error, e.g., if file didn't already exist
 
     // generate the file

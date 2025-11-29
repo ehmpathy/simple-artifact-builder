@@ -1,9 +1,9 @@
 import fs from 'fs';
 
-import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
+import { TEST_ASSETS_DIRECTORY } from '../.test/assets/testAssetsDirectory';
 import { exposeArtifactContentRunIsolatedUtility } from './exposeArtifactContentRunIsolatedUtility';
 
-describe('exposeARtifactContentRunIsolatedUtility', () => {
+describe('exposeArtifactContentRunIsolatedUtility', () => {
   it('should create the run isolated utility file', async () => {
     const projectRootDirectory = `${TEST_ASSETS_DIRECTORY}/empty-artifact-directory-for-run-isolated-util`;
     const targetOutputFilePath = `${projectRootDirectory}/.artifact/contents.run.isolated.js`;

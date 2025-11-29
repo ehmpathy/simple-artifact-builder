@@ -11,5 +11,5 @@ describe('generate', () => {
     expect(zipMock).toHaveBeenCalledWith({
       absoluteConfigPath: '/some/path/to/use',
     });
-  });
+  }, 30000); // oclif commands have significant startup time
 });

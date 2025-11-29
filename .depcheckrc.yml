@@ -14,7 +14,10 @@ ignores:
   - husky
   - '@oclif/plugin-help'
   - oclif
+  - tsx
+  - babel-jest
+  - test-fns
 
 # directories to not check for dependencies in
 ignorePatterns:
-  - src/logic/__test_assets__/** # these test assets contain imports we ignore
+  - src/logic/.test/assets/** # these test assets contain imports we ignore
