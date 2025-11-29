@@ -2,7 +2,7 @@
   "name": "simple-artifact-builder",
   "author": "ehmpathy",
   "description": "A tool to declaratively define best practices, maintainable evolve them, and scalably enforce them.",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "repository": "ehmpathy/simple-artifact-builder",
   "homepage": "https://github.com/ehmpathy/simple-artifact-builder",
   "keywords": [

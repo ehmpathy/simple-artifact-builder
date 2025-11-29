@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.15](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.14...v1.1.15) (2025-11-29)
+
+
+### Bug Fixes
+
+* **pnpm:** retain symlinks instead of dereference ([#23](https://github.com/ehmpathy/simple-artifact-builder/issues/23)) ([f34742d](https://github.com/ehmpathy/simple-artifact-builder/commit/f34742dce3a490de2cc0b6e8b20cc74a4a43a182))
+* **practs:** bump to latest best ([#21](https://github.com/ehmpathy/simple-artifact-builder/issues/21)) ([d48f390](https://github.com/ehmpathy/simple-artifact-builder/commit/d48f3909299b8a803d3fca844c6b6d7634338614))
+
 ## [1.1.14](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.13...v1.1.14) (2025-11-29)
 
 
