@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.14](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.13...v1.1.14) (2025-11-29)
+
+
+### Bug Fixes
+
+* **pnpm:** support symlink node modules to support pnpm resolution ([e9a2e5f](https://github.com/ehmpathy/simple-artifact-builder/commit/e9a2e5fa217dfe996940533d72cc1d9045cb0e4a))
+* **practs:** bump to latest best ([b3aca1a](https://github.com/ehmpathy/simple-artifact-builder/commit/b3aca1a2de9fcadb46993853be7ed715150f4007))
+
 ## [1.1.13](https://github.com/ehmpathy/simple-artifact-builder/compare/v1.1.12...v1.1.13) (2024-07-27)
 
 
