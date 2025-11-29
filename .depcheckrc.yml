@@ -11,10 +11,13 @@ ignores:
   - ts-node
   - type-fns
   - date-fns
+  - tsx
+  - test-fns
+  - babel-jest
   - husky
   - '@oclif/plugin-help'
   - oclif
 
 # directories to not check for dependencies in
 ignorePatterns:
-  - src/logic/__test_assets__/** # these test assets contain imports we ignore
+  - src/logic/.test/assets/** # these test assets contain imports we ignore

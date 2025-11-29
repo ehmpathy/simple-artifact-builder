@@ -1,4 +1,4 @@
-import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
+import { TEST_ASSETS_DIRECTORY } from '../.test/assets/testAssetsDirectory';
 import { readConfig } from './readConfig';
 
 describe('readConfig', () => {

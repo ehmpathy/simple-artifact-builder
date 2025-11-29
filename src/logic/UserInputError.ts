@@ -1,8 +1,10 @@
+import { HelpfulError } from 'helpful-errors';
+
 const capitalizeFirstLetter = (string: string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
-export class UserInputError extends Error {
+export class UserInputError extends HelpfulError {
   constructor(reason: string, opts?: { potentialSolution?: string }) {
     super(
       `

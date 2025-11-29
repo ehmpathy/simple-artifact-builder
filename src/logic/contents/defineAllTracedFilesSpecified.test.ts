@@ -1,5 +1,5 @@
 import { UserInputError } from '../UserInputError';
-import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
+import { TEST_ASSETS_DIRECTORY } from '../.test/assets/testAssetsDirectory';
 import { defineAllTracedFilesSpecified } from './defineAllTracedFilesSpecified';
 
 describe('defineALlTracedFilesSpecified', () => {

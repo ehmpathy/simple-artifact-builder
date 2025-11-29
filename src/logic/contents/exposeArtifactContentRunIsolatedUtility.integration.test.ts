@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-import { TEST_ASSETS_DIRECTORY } from '../__test_assets__/testAssetsDirectory';
+import { TEST_ASSETS_DIRECTORY } from '../.test/assets/testAssetsDirectory';
 import { exposeArtifactContentRunIsolatedUtility } from './exposeArtifactContentRunIsolatedUtility';
 
 describe('exposeARtifactContentRunIsolatedUtility', () => {
